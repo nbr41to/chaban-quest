@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "fmt": "eslint --fix . && prettier --write . --ignore-unknown",
+    "fmt": "yarn lint-staged",
     "storybook": "start-storybook -p 6006 -s public",
     "build-storybook": "build-storybook -s public",
     "test": "jest",
@@ -58,15 +58,5 @@
     "prettier-plugin-tailwindcss": "^0.1.13",
     "tailwindcss": "^3.2.4",
     "ts-jest": "^29.0.3"
-  },
-  "lint-staged": {
-    "src/**/*.{js,ts,jsx,tsx}": [
-      "npx eslint --fix",
-      "npx prettier --write . --ignore-unknown"
-    ],
-    "pages/**/*.{js,ts,jsx,tsx}": [
-      "npx eslint --fix",
-      "npx prettier --write . --ignore-unknown"
-    ]
   }
 }

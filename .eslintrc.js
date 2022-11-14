@@ -1,12 +1,12 @@
 module.exports = {
   extends: [
-    'airbnb',
-    'plugin:@typescript-eslint/recommended',
     'next/core-web-vitals',
+    'plugin:@typescript-eslint/recommended',
+    "plugin:import/recommended",
     'plugin:storybook/recommended',
     'prettier',
   ],
-  plugins: ['unused-imports', 'import'],
+  plugins: ['unused-imports'],
   parser: '@typescript-eslint/parser',
   parserOptions: {
     project: './tsconfig.json',
@@ -66,7 +66,6 @@ module.exports = {
   },
   overrides: [
     {
-      // 実はいらない
       files: ['*.stories.tsx', 'pages/**/*'],
       rules: {
         'import/no-default-export': 'off',
